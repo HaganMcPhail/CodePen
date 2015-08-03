@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weather">
+    <head>
+        <meta http-equiv="content-type" content="application/json; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Weather</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0">
+                <div ng-controller="7DayForecast" class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 weather-container">
+                    <div class="row">
+                        <div class="col-xs-12 meta-info">
+                            <div class="row hidden-xs">
+                                <div class="col-xs-5">Dallas</div>
+                                <div class="col-xs-2"><div class="sun"></div></div>
+                                <div class="col-xs-5">68&deg;</div>
+                            </div>
+                            <div class="row visible-xs">
+                                <div class="col-xs-12"><div class="sun"></div></div>
+                                <div class="col-xs-6">City</div>
+                                <div class="col-xs-6">Temp</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 seven-cols">
+                            <div class="row">
+                                <div class="col-xs-1">
+                                    <div class="weekday">
+                                        SUN
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="cloudy"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        69&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="weekday">
+                                        MON
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="part-sun"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        73&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="weekday">
+                                        TUE
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="part-sun"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        72&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="weekday">
+                                        WED
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="sun"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        73&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="weekday">
+                                        THU
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="storm"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        63&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="weekday">
+                                        FRI
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="sun"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        70&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                                <div class="col-xs-1 no-br">
+                                    <div class="weekday">
+                                        SAT
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <div class="part-sun"></div>
+                                        </div>
+                                    </div>
+                                    <div class="temp">
+                                        74&deg;
+                                    </div>
+                                    <div class="space">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+        <!-- script references -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script type="text/javascript"></script>
+    </body>
+</html>
