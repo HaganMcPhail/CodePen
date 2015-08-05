@@ -18,10 +18,19 @@ html,body{
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
+div.city-tb{display: none;}
+.info-container{position: relative;}
+.info-btn{position: absolute;top: 10px; right: 10px; font-size: 1.3em;cursor: pointer;z-index: 2000}
+.row .search{padding-top:50px;}
+.form-control {
+    line-height: 50px;
+    height: 50px;
+    font-size: 20px;
+}
 .weather-container{
     background-color: rgba(255,255,255,.15);
     min-height:50vh;
-    margin-top: 15vh;
+    margin-top: 10vh;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
@@ -35,38 +44,6 @@ html,body{
     font-size: 28px;
     border-bottom: 1px solid rgba(255,255,255,.8);
     min-height: 100px;
-}
-.sun{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('../img/weather-icons.png') no-repeat -101px -6px;
-    width: 40px;
-    height: 39px;
-}
-.part-sun {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('../img/weather-icons.png') no-repeat -671px 0;
-    width: 49px;
-    height: 48px;
-}
-.cloudy{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('../img/weather-icons.png') no-repeat -384px -102px;
-    width: 48px;
-    height: 30px;
-}
-.storm {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('../img/weather-icons.png') no-repeat -96px -192px;
-    width: 49px;
-    height: 42px;
 }
 .seven-cols > .row > div{
     padding-left: 0;
@@ -86,13 +63,21 @@ html,body{
     padding-bottom: 45px;
     height: 150px;
 }
-.icon > div {margin-bottom:10px;}
-.temp{
+/*.icon img{
+    width:80%;
+}
+.icon > div {margin-bottom:10px;}*/
+.maxtemp{
+    text-align: center;
+    text-shadow:1px 1px 5px #555;
+    padding-bottom:5px;
+}
+.mintemp{
     text-align: center;
     text-shadow:1px 1px 5px #555;
     padding-bottom:25px;
 }
-.seven-cols > .row > div.no-br{
+.seven-cols > .weather-info > div:nth-child(7){
     border-right: none;
 }
 .space{
@@ -103,6 +88,75 @@ html,body{
     background-color: rgba(255,255,255,.2);
     margin-bottom: 20px;
 }
+
+[class^="icon-"] {
+  display: inline-block;
+  background: url('../img/weather-icons.png') no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-thunderstorm-light {
+  background-position: -575px -95px;
+}
+
+.icon-thunderstorm-heavy {
+  background-position: -766px -191px;
+}
+
+.icon-rain-light {
+  background-position: -671px -95px;
+}
+
+.icon-rain-heavy {
+  background-position: -766px -95px;
+}
+
+.icon-rain-freezing {
+  background-position: -479px -191px;
+}
+
+.icon-snow-light {
+  background-position: -241px -191px;
+}
+
+.icon-snow-heavy {
+  background-position: -287px -191px;
+}
+
+.icon-mist {
+  background-position: -383px 0;
+}
+
+.icon-clear {
+  background-position: -95px 0;
+}
+
+.icon-cloudy-partly {
+  background-position: -671px 0;
+}
+
+.icon-cloudy {
+  background-position: -383px -95px;
+}
+
+.icon-windy {
+  background-position: -479px 0;
+}
+
+.icon-storm {
+  background-position: -95px -190px;
+}
+
+.icon-unknown {
+  background-image: none;
+    content: '?';
+        font-size: 2em;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+}
+
 @media (min-width: 200px){
   .seven-cols .col-xs-1,
   .seven-cols .col-md-1,
